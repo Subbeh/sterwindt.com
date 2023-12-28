@@ -4,6 +4,12 @@ title: "@sterwindt"
 theme: "PaperMod"
 # paginate: 5
 
+deployment:
+  targets:
+    name: sterwindt.com
+    URL: "s3://cloud.sterwindt.com?region=us-east-1"
+    cloudFrontDistributionID: "ER2YHPN5TLO4T"
+
 # enableInlineShortcodes: true
 # enableRobotsTXT: true
 # buildDrafts: false
@@ -31,10 +37,10 @@ params:
   # disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
-  # ShowPostNavLinks: true
-  # ShowBreadCrumbs: true
-  # ShowCodeCopyButtons: true
+  # ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
   # ShowWordCount: true
   # ShowRssButtonInSectionTermList: true
   # UseHugoToc: true
@@ -61,24 +67,24 @@ params:
   #   iconHeight: 35
 
   # profile-mode
-  # profileMode:
-  #   enabled: true # needs to be explicitly set
-  #   title: Steven Terwindt
-  #   subtitle: "This is subtitle"
-  #   imageUrl: "<img location>"
-  #   imageWidth: 120
-  #   imageHeight: 120
-  #   imageTitle: my image
-  #   buttons:
-  #     - name: Posts
-  #       url: posts
-  #     - name: Tags
-  #       url: tags
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Steven Terwindt
+    subtitle: "Welcome to my MySpace"
+    imageUrl: "images/profile.webp"
+    imageWidth: 200
+    imageHeight: 200
+    imageTitle: profile
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
 
   # home-info mode
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: I'm Steven Terwindt. Welcome to my MySpace.
+  # homeInfoParams:
+  #   Title: "Hi there \U0001F44B"
+  #   Content: I'm Steven Terwindt. Welcome to my MySpace.
 
   socialIcons:
     - name: email
@@ -89,18 +95,15 @@ params:
     - name: linkedin
       title: Linkedin
       url: "https://www.linkedin.com/in/steventerwindt/"
-    - name: cv
-      title: Resume
-      url: "https://resume.cloud.sterwindt.com"
 
   editPost:
     URL: "https://github.com/Subbeh/sterwindt.com/tree/main/content"
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
-  # analytics:
-  #   google:
-  #     SiteVerificationTag: "XYZabc"
+  analytics:
+    google:
+      SiteVerificationTag: "G-WVYQCPS4Y5"
   #   bing:
   #     SiteVerificationTag: "XYZabc"
   #   yandex:
@@ -129,14 +132,13 @@ params:
 
 menu:
   main:
-    - name: Archive
+    - name: archive
       url: archives
       weight: 10
-    - name: Search
+    - name: search
       url: search
       weight: 10
-    - identifier: resume
-      name: resume
+    - name: resume
       url: https://resume.cloud.sterwindt.com
       weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
