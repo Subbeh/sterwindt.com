@@ -77,9 +77,9 @@ params:
     imageTitle: profile
     buttons:
       - name: Posts
-        url: posts
+        url: posts/index.html
       - name: Tags
-        url: tags
+        url: tags/index.html
 
   # home-info mode
   # homeInfoParams:
@@ -133,10 +133,10 @@ params:
 menu:
   main:
     - name: archive
-      url: archives
+      url: archives/index.html
       weight: 10
     - name: search
-      url: search
+      url: search/index.html
       weight: 10
     - name: resume
       url: https://resume.cloud.sterwindt.com
