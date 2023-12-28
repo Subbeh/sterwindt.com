@@ -2,7 +2,7 @@ baseURL: https://cloud.sterwindt.com/
 languageCode: en-us
 title: "@sterwindt"
 theme: "PaperMod"
-uglyURLs: true
+# uglyURLs: true
 # paginate: 5
 
 deployment:
@@ -78,9 +78,9 @@ params:
     imageTitle: profile
     buttons:
       - name: Posts
-        url: posts/index.html
+        url: posts
       - name: Tags
-        url: tags/index.html
+        url: tags
 
   # home-info mode
   # homeInfoParams:
@@ -134,10 +134,10 @@ params:
 menu:
   main:
     - name: archive
-      url: archives/index.html
+      url: archives
       weight: 10
     - name: search
-      url: search/index.html
+      url: search
       weight: 10
     - name: resume
       url: https://resume.cloud.sterwindt.com
