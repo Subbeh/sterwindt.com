@@ -15,7 +15,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
-          fetch-depth: 0
 
       - name: Configure AWS credentials from prod account
         uses: aws-actions/configure-aws-credentials@v4
@@ -25,17 +24,16 @@ jobs:
           role-to-assume: ${{ secrets.AWS_ROLE_ID }}
           aws-region: us-east-1
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "latest"
+      - name: Install Hugo
+        run: |
+          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.121.1/hugo_extended_0.121.1_linux-amd64.deb
+          sudo dpkg -i hugo.deb
 
       - name: Build
-        run: hugo --minify
+        run: |
+          hugo --minify
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+      - name: Copy files to the test website with the AWS CLI
+        run: |
+          aws s3 sync ./public s3://${{ secrets.AWS_BUCKET_BLOG }} --exact-timestamps --delete
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID_BLOG }} --paths '/*'
