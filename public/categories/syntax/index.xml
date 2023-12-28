@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>syntax on @sterwindt</title>
-    <link>https://cloud.sterwindt.com/categories/syntax/</link>
+    <link>https://cloud.sterwindt.com/categories/syntax.html</link>
     <description>Recent content in syntax on @sterwindt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,9 +10,9 @@
     <atom:link href="https://cloud.sterwindt.com/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Code Syntax Guide</title>
-      <link>https://cloud.sterwindt.com/posts/test/</link>
+      <link>https://cloud.sterwindt.com/posts/test.html</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://cloud.sterwindt.com/posts/test/</guid>
+      <guid>https://cloud.sterwindt.com/posts/test.html</guid>
       <description>Sample article showcasing basic code syntax and formatting for HTML elements.</description>
     </item>
   </channel>

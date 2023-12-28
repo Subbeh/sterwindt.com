@@ -2,6 +2,7 @@ baseURL: https://cloud.sterwindt.com/
 languageCode: en-us
 title: "@sterwindt"
 theme: "PaperMod"
+uglyURLs: true
 # paginate: 5
 
 deployment:
@@ -49,7 +50,7 @@ params:
   # comments: false
   # hidemeta: false
   # hideSummary: false
-  # showtoc: false
+  showtoc: true
   # tocopen: false
 
   # assets:

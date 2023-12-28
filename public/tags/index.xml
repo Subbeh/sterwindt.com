@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on @sterwindt</title>
-    <link>https://cloud.sterwindt.com/tags/</link>
+    <link>https://cloud.sterwindt.com/tags.html</link>
     <description>Recent content in Tags on @sterwindt</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -10,30 +10,30 @@
     <atom:link href="https://cloud.sterwindt.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>code</title>
-      <link>https://cloud.sterwindt.com/tags/code/</link>
+      <link>https://cloud.sterwindt.com/tags/code.html</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://cloud.sterwindt.com/tags/code/</guid>
+      <guid>https://cloud.sterwindt.com/tags/code.html</guid>
       <description></description>
     </item>
     <item>
       <title>gist</title>
-      <link>https://cloud.sterwindt.com/tags/gist/</link>
+      <link>https://cloud.sterwindt.com/tags/gist.html</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://cloud.sterwindt.com/tags/gist/</guid>
+      <guid>https://cloud.sterwindt.com/tags/gist.html</guid>
       <description></description>
     </item>
     <item>
       <title>markdown</title>
-      <link>https://cloud.sterwindt.com/tags/markdown/</link>
+      <link>https://cloud.sterwindt.com/tags/markdown.html</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://cloud.sterwindt.com/tags/markdown/</guid>
+      <guid>https://cloud.sterwindt.com/tags/markdown.html</guid>
       <description></description>
     </item>
     <item>
       <title>syntax</title>
-      <link>https://cloud.sterwindt.com/tags/syntax/</link>
+      <link>https://cloud.sterwindt.com/tags/syntax.html</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://cloud.sterwindt.com/tags/syntax/</guid>
+      <guid>https://cloud.sterwindt.com/tags/syntax.html</guid>
       <description></description>
     </item>
   </channel>
