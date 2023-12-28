@@ -1,17 +1,22 @@
 baseURL: https://cloud.sterwindt.com/
 languageCode: en-us
-title: My New Hugo Site
+title: "@sterwindt"
 theme: "PaperMod"
+# paginate: 5
 
+# enableInlineShortcodes: true
 # enableRobotsTXT: true
 # buildDrafts: false
 # buildFuture: false
 # buildExpired: false
+# enableEmoji: true
+# pygmentsUseClasses: true
+# mainsections: ["posts", "papermod"]
 
 # googleAnalytics: G-WVYQCPS4Y5
 
-# minify:
-#   disableXML: true
+minify:
+  disableXML: true
 #   minifyOutput: true
 
 params:
@@ -22,11 +27,11 @@ params:
   author: Steven Terwindt
   # images: ["<link or path of image for opengraph, twitter-cards>"]
   # DateFormat: "January 2, 2006"
-  # defaultTheme: auto # dark, light
+  defaultTheme: auto # dark, light
   # disableThemeToggle: false
 
-  # ShowReadingTime: true
-  # ShowShareButtons: true
+  ShowReadingTime: true
+  ShowShareButtons: true
   # ShowPostNavLinks: true
   # ShowBreadCrumbs: true
   # ShowCodeCopyButtons: true
@@ -57,8 +62,8 @@ params:
 
   # profile-mode
   # profileMode:
-  #   enabled: false # needs to be explicitly set
-  #   title: ExampleSite
+  #   enabled: true # needs to be explicitly set
+  #   title: Steven Terwindt
   #   subtitle: "This is subtitle"
   #   imageUrl: "<img location>"
   #   imageWidth: 120
@@ -71,17 +76,27 @@ params:
   #       url: tags
 
   # home-info mode
-  # homeInfoParams:
-  #   Title: "Hi there \U0001F44B"
-  #   Content: Welcome to my blog
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: I'm Steven Terwindt. Welcome to my MySpace.
 
-  # socialIcons:
-  #   - name: twitter
-  #     url: "https://twitter.com/"
-  #   - name: stackoverflow
-  #     url: "https://stackoverflow.com"
-  #   - name: github
-  #     url: "https://github.com/"
+  socialIcons:
+    - name: email
+      url: "mailto:steventerwindt@gmail.com"
+    - name: github
+      title: Github
+      url: "https://github.com/Subbeh"
+    - name: linkedin
+      title: Linkedin
+      url: "https://www.linkedin.com/in/steventerwindt/"
+    - name: cv
+      title: Resume
+      url: "https://resume.cloud.sterwindt.com"
+
+  editPost:
+    URL: "https://github.com/Subbeh/sterwindt.com/tree/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
 
   # analytics:
   #   google:
@@ -111,21 +126,19 @@ params:
   #   threshold: 0.4
   #   minMatchCharLength: 0
   #   keys: ["title", "permalink", "summary", "content"]
-# menu:
-#   main:
-#     - identifier: categories
-#       name: categories
-#       url: /categories/
-#       weight: 10
-#     - identifier: tags
-#       name: tags
-#       url: /tags/
-#       weight: 20
-#     - identifier: example
-#       name: example.org
-#       url: https://example.org
-#       weight: 30
 
+menu:
+  main:
+    - name: Archive
+      url: archives
+      weight: 10
+    - name: Search
+      url: search
+      weight: 10
+    - identifier: resume
+      name: resume
+      url: https://resume.cloud.sterwindt.com
+      weight: 30
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 # markup:
@@ -136,3 +149,9 @@ params:
 #     # guessSyntax: true
 #     # lineNos: true
 #     # style: monokai
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
