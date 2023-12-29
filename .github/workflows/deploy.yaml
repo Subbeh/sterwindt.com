@@ -35,5 +35,5 @@ jobs:
 
       - name: Copy files to the test website with the AWS CLI
         run: |
-          aws s3 sync ./public s3://${{ secrets.AWS_BUCKET_BLOG }} --exact-timestamps --delete
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID_BLOG }} --paths '/*'
+          aws s3 sync ./public s3://${{ secrets.AWS_BUCKET_NAME }} --exact-timestamps --delete
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths '/*'
