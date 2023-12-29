@@ -37,3 +37,8 @@ jobs:
         run: |
           aws s3 sync ./public s3://${{ secrets.AWS_BUCKET_NAME }} --exact-timestamps --delete
           aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths '/*'
+
+      - uses: sarisia/actions-status-discord@v1
+        if: failure()
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
