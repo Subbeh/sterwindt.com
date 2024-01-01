@@ -20,7 +20,9 @@ deployment:
 # pygmentsUseClasses: true
 # mainsections: ["posts", "papermod"]
 
-# googleAnalytics: G-WVYQCPS4Y5
+services:
+  googleAnalytics:
+    id: "G-WVYQCPS4Y5"
 
 minify:
   disableXML: true
@@ -29,7 +31,7 @@ minify:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Steven Terwindt
-  description: "My personal stuff"
+  description: "Blog"
   keywords: [Blog, Portfolio]
   author: Steven Terwindt
   # images: ["<link or path of image for opengraph, twitter-cards>"]
@@ -102,14 +104,6 @@ params:
     Text: "Suggest Changes" # edit text
     appendFilePath: true # to append file path to Edit link
 
-  analytics:
-    google:
-      SiteVerificationTag: "G-WVYQCPS4Y5"
-  #   bing:
-  #     SiteVerificationTag: "XYZabc"
-  #   yandex:
-  #     SiteVerificationTag: "XYZabc"
-
   # cover:
   #   hidden: true # hide everywhere but not in structured data
   #   hiddenInList: true # hide on list pages and home
@@ -152,6 +146,11 @@ menu:
 #     # guessSyntax: true
 #     # lineNos: true
 #     # style: monokai
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 outputs:
   home:
